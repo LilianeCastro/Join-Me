@@ -15,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - Ground
   - 
   - 
@@ -52,8 +52,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Itens
+  - name: PlatformsInvertedWorldOfPlayers
     uniqueID: 3307615129
+    locked: 0
+  - name: PlatformCommonWorld
+    uniqueID: 622800001
     locked: 0
   - name: Foreground
     uniqueID: 1221637491
