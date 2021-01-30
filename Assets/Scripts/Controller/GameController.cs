@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlatformType { Movement, Fall, Standing}
+
 public class GameController : Singleton<GameController>
 {
     [Header("Inverted world of a particular player")]

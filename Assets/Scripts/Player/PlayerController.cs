@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject _feedbackControl;
-    //[SerializeField] private Camera _mainCamPlayer;
+    [SerializeField] private Camera _mainCamPlayer;
 
     private Rigidbody2D _playerRb;
     [SerializeField] private LayerMask layerMask;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         set
         {
             _canControl = value;
-            //_mainCamPlayer.gameObject.SetActive(value);
+            _mainCamPlayer.gameObject.SetActive(value);
         }
     }
 
