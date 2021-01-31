@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Piece
+  - PlatformMovement
   layers:
   - Default
   - TransparentFX

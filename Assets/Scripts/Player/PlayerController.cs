@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject _feedbackControl;
-    [SerializeField] private Camera _mainCamPlayer;
-
     private Rigidbody2D _playerRb;
-    [SerializeField] private LayerMask layerMask;
+    private SpriteRenderer _playerSr;
+    private Animator _playerAnim;
+
+    [SerializeField] private LayerMask layerMask; //pulo
+    [SerializeField] private GameObject _feedbackControl;
+    [SerializeField] private Camera _mainCamPlayer;
+    [SerializeField] private Color _colorDisabled;
 
     [Header("Ground Check")]
-    [SerializeField] private Transform _groundCheckL;
-    [SerializeField] private Transform _groundCheckR;
+    [SerializeField] private Transform _groundCheckL = default;
+    [SerializeField] private Transform _groundCheckR = default;
     [SerializeField] private float _distance = 1;
     private bool _isGrounded = true;
 
@@ -20,8 +23,8 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D _hitPlayerL;
     private RaycastHit2D _hitPlayerR;
     private Collider2D _hitPlayerCollider;
-    [SerializeField] private Transform _playerCheckL;
-    [SerializeField] private Transform _playerCheckR;
+    [SerializeField] private Transform _playerCheckL = default;
+    [SerializeField] private Transform _playerCheckR = default;
     [SerializeField] private float _distanceToPlayer = 0.2f;
 
     [Header("Physics")]
@@ -39,24 +42,31 @@ public class PlayerController : MonoBehaviour
         set
         {
             _canControl = value;
-            _mainCamPlayer.gameObject.SetActive(value);
+            _mainCamPlayer.gameObject.SetActive(value);           
         }
     }
 
-    private bool _canChangePlayer;
+    private bool _canChangePlayer = false;
+    private bool _canChangeWorld = false;
+    private bool _isLookLeft = false;
 
     [SerializeField] private string _namePlayer;
     public string NamePlayer{ get; }
 
-    private bool _canChangeWorld = true;
-
     void Awake()
     {
         _playerRb = GetComponent<Rigidbody2D>();
+        _playerSr = GetComponent<SpriteRenderer>();
+        _playerAnim = GetComponent<Animator>();
+
+        if (!CanControl)
+        {
+            _playerSr.color = _colorDisabled;
+        }
     }
 
     void Update()
-    {  
+    {
         if (!CanControl) { return ; }
 
         Movement();
@@ -68,18 +78,41 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (!CanControl) { return ; }
+        if (!CanControl) { return ; }
+
         _isGrounded = Physics2D.Raycast(_groundCheckL.position, Vector2.down, _distance, layerMask)
         || Physics2D.Raycast(_groundCheckR.position, Vector2.down, _distance, layerMask);
 
         _hitPlayerL = Physics2D.Raycast(_playerCheckL.position, Vector2.left, _distanceToPlayer, 1 << LayerMask.NameToLayer("Player"));
         _hitPlayerR = Physics2D.Raycast(_playerCheckR.position, Vector2.right, _distanceToPlayer, 1 << LayerMask.NameToLayer("Player"));
+    
+        _playerAnim.SetFloat("speedY", _playerRb.velocity.y);
     }
 
     void Movement()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
-        transform.Translate(Vector3.right * _speedPlayer * horizontalInput * Time.deltaTime);    
+        transform.Translate(Vector3.right * _speedPlayer * horizontalInput * Time.deltaTime);
+        _playerAnim.SetBool("isGrounded", _isGrounded);
+        _playerAnim.SetInteger("speedX", (int)horizontalInput);
+
+        if(horizontalInput > 0 && _isLookLeft)
+        {
+            Flip();
+
+        }
+        else if(horizontalInput < 0 && !_isLookLeft)
+        {
+            Flip();
+            
+        }
+
+    }
+
+    void Flip()
+    {
+        _isLookLeft = !_isLookLeft;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
     void Jump()
@@ -94,8 +127,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {    
-            GameController.Instance.ActiveWorld(this.gameObject, _canChangeWorld);
-            _canChangeWorld = !_canChangeWorld;
+            if (GameController.Instance.IsInvertedWorldActive)
+            {
+                GameController.Instance.ActiveWorld(this.gameObject, false); 
+            }
+            else
+            {
+                GameController.Instance.ActiveWorld(this.gameObject, true);
+            }
         }    
     }
 
@@ -105,8 +144,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.N))
         {
+            if (GameController.Instance.IsInvertedWorldActive)
+            {
+                GameController.Instance.ChangeWorld();
+            }
+
             _canChangePlayer = false;
-                              
+                            
             GameController.Instance.ActiveWorld(this.gameObject, false);
 
             CanControl = false;
@@ -118,6 +162,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #region  Hit Player
     void HitPlayer()
     {        
         if (_hitPlayerL.collider != null && _hitPlayerL.collider.gameObject.CompareTag("Player") && CanControl)
@@ -135,7 +180,11 @@ public class PlayerController : MonoBehaviour
         //Quando encostar no outro player ele nao vai poder mais andar, e o mundo vai para o mundo normal de ambos
         _canChangePlayer = true;
         _hitPlayerCollider = col;
+
+        col.TryGetComponent(out PlayerController _otherPlayer);
+        _otherPlayer.GetComponent<SpriteRenderer>().color = Color.white;
     }
+    #endregion
 
     void DrawRayChecks()
     {
@@ -145,4 +194,22 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(_playerCheckL.position, Vector2.left * _distanceToPlayer, _hitPlayerL ? Color.green : Color.red);
         Debug.DrawRay(_playerCheckR.position, Vector2.right * _distanceToPlayer, _hitPlayerR ? Color.green : Color.red);
     }
+
+    #region  Collision Platform
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("PlatformMovement"))
+        {
+            transform.parent = other.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {  
+        if (other.gameObject.CompareTag("PlatformMovement"))
+        {
+            transform.parent = null;
+        }
+    }
+    #endregion
 }

@@ -6,11 +6,11 @@ public class PlatformController : MonoBehaviour
 {
     private int _idTarget;
 
-    public Platform         _Platform;
-    public Transform[]      _posPlat;
+    public Platform _Platform;
+    public Transform[] _posPlat;
 
     [SerializeField] private PlatformType _platformType;
-    [SerializeField] [Range(1.0f, 5.0f)] private float _speed;
+    [SerializeField] [Range(1.0f, 5.0f)] private float _speed = 2.0f;
     
     void Start()
     {
@@ -20,9 +20,16 @@ public class PlatformController : MonoBehaviour
         }
     }
 
-    IEnumerator PlatformMove()
+    private void Update()
     {
-        yield return new WaitForEndOfFrame();
+        if (_platformType.Equals(PlatformType.Movement))
+        {
+            PlatformMove();
+        }
+    }
+
+    private void PlatformMove()
+    {
         _Platform.transform.position = Vector3.MoveTowards(_Platform.transform.position, _posPlat[_idTarget].position, _speed * Time.deltaTime);
 
         if (_Platform.transform.position.Equals(_posPlat[_idTarget].position))
@@ -33,7 +40,6 @@ public class PlatformController : MonoBehaviour
                 _idTarget = 0;
             }
         }
-        StartCoroutine("PlatformMove");
     }
 
     IEnumerator PlatformFall()

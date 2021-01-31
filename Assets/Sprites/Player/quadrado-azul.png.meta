@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: a89318fe446282542b0eebad56a36bc3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2077004385528998653
+    second: quadrado-azul_0
+  - first:
+      213: 2264851922814495321
+    second: quadrado-azul_1
+  - first:
+      213: 1944998900341846448
+    second: quadrado-azul_2
+  - first:
+      213: 1966925549017224130
+    second: quadrado-azul_3
+  - first:
+      213: 4867149684358531797
+    second: quadrado-azul_4
+  - first:
+      213: -7152227666335792107
+    second: quadrado-azul_5
+  - first:
+      213: -1191667039812088682
+    second: quadrado-azul_6
+  - first:
+      213: 973718256997571167
+    second: quadrado-azul_7
+  - first:
+      213: -6483125382328497871
+    second: quadrado-azul_8
+  - first:
+      213: -7953605105673437592
+    second: quadrado-azul_9
+  - first:
+      213: -4568830321394303138
+    second: quadrado-azul_10
+  - first:
+      213: 1082295809573566911
+    second: quadrado-azul_11
+  - first:
+      213: -1553846172243397179
+    second: quadrado-azul_12
+  - first:
+      213: 6475210858587534044
+    second: quadrado-azul_13
+  - first:
+      213: 2097919566410644834
+    second: quadrado-azul_14
+  - first:
+      213: 1179834999851561952
+    second: quadrado-azul_15
+  - first:
+      213: 6140193168322600420
+    second: quadrado-azul_16
+  - first:
+      213: 885616321486088630
+    second: quadrado-azul_17
+  - first:
+      213: 6174568397460046769
+    second: quadrado-azul_18
+  - first:
+      213: -3535212126672664886
+    second: quadrado-azul_19
+  - first:
+      213: 2358226725728101007
+    second: quadrado-azul_0
+  - first:
+      213: -2801732629661811195
+    second: quadrado-azul_1
+  - first:
+      213: -8322079727745279198
+    second: quadrado-azul_2
+  - first:
+      213: 534679056949199959
+    second: quadrado-azul_3
+  - first:
+      213: -5914897729264476700
+    second: quadrado-azul_4
+  - first:
+      213: 314332543494791756
+    second: quadrado-azul_5
+  - first:
+      213: -1983604042613636849
+    second: quadrado-azul_6
+  - first:
+      213: -5978653909953587672
+    second: quadrado-azul_7
+  - first:
+      213: -7896624216707746610
+    second: quadrado-azul_8
+  - first:
+      213: -3271271070242604713
+    second: quadrado-azul_9
+  - first:
+      213: -5116100205640952978
+    second: quadrado-azul_10
+  - first:
+      213: 2639229256056262048
+    second: quadrado-azul_11
+  - first:
+      213: 5102839281707270286
+    second: quadrado-azul_12
+  - first:
+      213: -8163134550671529833
+    second: quadrado-azul_13
+  - first:
+      213: 7904275552263011664
+    second: quadrado-azul_14
+  - first:
+      213: -1215259764425651669
+    second: quadrado-azul_15
+  - first:
+      213: 220209690317947753
+    second: quadrado-azul_16
+  - first:
+      213: -6754385816219053200
+    second: quadrado-azul_17
+  - first:
+      213: 3765779841078743013
+    second: quadrado-azul_18
+  - first:
+      213: 1659189626664862073
+    second: quadrado-azul_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: quadrado-azul_0
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1591
+        width: 184
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f822bde66ba1ab020800000000000000
+      internalID: 2358226725728101007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_1
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1591
+        width: 197
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ef26d740f3e19d0800000000000000
+      internalID: -2801732629661811195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_2
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 1591
+        width: 197
+        height: 199
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b53437498028c80800000000000000
+      internalID: -8322079727745279198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_3
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1591
+        width: 197
+        height: 194
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7544c4af4cf8b6700800000000000000
+      internalID: 534679056949199959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_4
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 1591
+        width: 184
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed1d6c8adf0aeda0800000000000000
+      internalID: -5914897729264476700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_5
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1252
+        width: 184
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c422a5c68cbbc5400800000000000000
+      internalID: 314332543494791756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_6
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1252
+        width: 192
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f014cf002a2d874e0800000000000000
+      internalID: -1983604042613636849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_7
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1252
+        width: 200
+        height: 202
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8265736f1fd870da0800000000000000
+      internalID: -5978653909953587672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_8
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1252
+        width: 193
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4336eec1e896290800000000000000
+      internalID: -7896624216707746610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_9
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 1252
+        width: 184
+        height: 183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7597d262b4c1a92d0800000000000000
+      internalID: -3271271070242604713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_10
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 911
+        width: 185
+        height: 186
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63d77f18f5fff8b0800000000000000
+      internalID: -5116100205640952978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_11
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 922
+        width: 197
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad4d00760d60a420800000000000000
+      internalID: 2639229256056262048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_12
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 943
+        width: 197
+        height: 219
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80421c6a4de0d640800000000000000
+      internalID: 5102839281707270286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_13
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 922
+        width: 197
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79861855068b6be80800000000000000
+      internalID: -8163134550671529833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_14
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 912
+        width: 184
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05df0737cb0a1bd60800000000000000
+      internalID: 7904275552263011664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_15
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 595
+        width: 184
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8597dea7822fe0800000000000000
+      internalID: -1215259764425651669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_16
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 596
+        width: 196
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963008feb875e0300800000000000000
+      internalID: 220209690317947753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_17
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 596
+        width: 206
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073935ce2e99342a0800000000000000
+      internalID: -6754385816219053200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_18
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 595
+        width: 197
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef43d140dcb24430800000000000000
+      internalID: 3765779841078743013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadrado-azul_19
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 595
+        width: 184
+        height: 184
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9714f58bc20a60710800000000000000
+      internalID: 1659189626664862073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
