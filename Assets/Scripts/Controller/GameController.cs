@@ -52,7 +52,7 @@ public class GameController : Singleton<GameController>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWorld();
         }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _playerRb;
     private SpriteRenderer _playerSr;
     private Animator _playerAnim;
+    private Collider2D _playerCol;
 
     [SerializeField] private LayerMask layerMask; //pulo
     [SerializeField] private GameObject _feedbackControl;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         _playerRb = GetComponent<Rigidbody2D>();
         _playerSr = GetComponent<SpriteRenderer>();
         _playerAnim = GetComponent<Animator>();
+        _playerCol = GetComponent<Collider2D>();
 
         if (!CanControl)
         {
@@ -74,6 +76,7 @@ public class PlayerController : MonoBehaviour
         ChangeWorld();
         HitPlayer();
         ChangePlayer();
+        //PlatformPass();
     }
 
     private void FixedUpdate()
@@ -123,9 +126,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void PlatformPass()
+    {
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            StartCoroutine(PassUnderPlatform());
+        }
+    }
+
+    IEnumerator PassUnderPlatform()
+    {
+        _playerCol.enabled = false;
+        yield return new WaitForSeconds(0.05f);
+        _playerCol.enabled = true;
+    }
+
     void ChangeWorld()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Q))
         {    
             if (GameController.Instance.IsInvertedWorldActive)
             {
@@ -142,7 +160,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!_canChangePlayer) { return ; }
 
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (GameController.Instance.IsInvertedWorldActive)
             {
