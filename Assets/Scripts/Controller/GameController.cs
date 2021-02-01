@@ -9,9 +9,9 @@ public class GameController : Singleton<GameController>
 {
     #region Variables & Properties
     [Header("Inverted world of a particular player")]
-    [SerializeField] private World[] _worlds;
+    [SerializeField] private GameObject[] _worlds;
     [SerializeField] private GameObject[] _player;
-    [SerializeField] private Dictionary<GameObject, World> _dicWorldPlayer = new Dictionary<GameObject, World>(); 
+    [SerializeField] private Dictionary<GameObject, GameObject> _dicWorldPlayer = new Dictionary<GameObject, GameObject>(); 
 
     [Header("Common world for all players")]
     [SerializeField] private GameObject _commonWorld;
@@ -37,10 +37,28 @@ public class GameController : Singleton<GameController>
     private List<GameObject> _listPlayersCanControl = new List<GameObject>();
 
     #region Unity Methods
+    public override void Init()
+    {
+        InitializeDictionaryPlayerWorld();
+    }
+
     private void Start()
     {
-        _invertedWorld.gameObject.SetActive(false);
+        _invertedWorld.gameObject.SetActive(false);        
+    }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeWorld();
+        }
+    }
+    #endregion
+
+    #region Lists
+    private void InitializeDictionaryPlayerWorld()
+    {
         if (_worlds.Length == _player.Length)
         {
             for (int i = 0; i < _worlds.Length; i++)
@@ -50,12 +68,9 @@ public class GameController : Singleton<GameController>
         }
     }
 
-    private void Update()
+    public void InitializeListPlayer(GameObject _player)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ChangeWorld();
-        }
+        _listPlayersCanControl.Add(_player);
     }
     #endregion
 

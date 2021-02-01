@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499051704161694586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.314, y: 0.7, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5935875302614611537}
@@ -522,7 +522,7 @@ MonoBehaviour:
   _speedPlayer: 5
   _jumpForce: 1500
   _canControl: 0
-  _namePlayer: PlayerC
+  _activeForTheFirstTime: 0
 --- !u!212 &5935875302614611538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8479937563821019923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.222, y: 0.7, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5935875302614611537}

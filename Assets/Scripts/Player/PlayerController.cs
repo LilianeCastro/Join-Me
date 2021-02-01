@@ -50,16 +50,20 @@ public class PlayerController : MonoBehaviour
         set
         {
             _canControl = value;
-            _mainCamPlayer.gameObject.SetActive(value);           
+            _mainCamPlayer.gameObject.SetActive(value);       
         }
     }
 
     [SerializeField] private bool _activeForTheFirstTime = false;
-    public bool ActiveForTheFirstTime
+    private bool ActiveForTheFirstTime
     {
         get
         {
             return _activeForTheFirstTime;
+        }
+        set
+        {
+            _activeForTheFirstTime = value;
         }
     }
     #endregion
@@ -70,12 +74,20 @@ public class PlayerController : MonoBehaviour
         _playerRb = GetComponent<Rigidbody2D>();
         _playerSr = GetComponent<SpriteRenderer>();
         _playerAnim = GetComponent<Animator>();
-        _playerCol = GetComponent<Collider2D>();
+        _playerCol = GetComponent<Collider2D>();        
+    }
+
+    private void Start()
+    {
+        if (ActiveForTheFirstTime)
+        {
+            GameController.Instance.InitializeListPlayer(this.gameObject);
+        }
 
         if (!CanControl)
         {
             _playerSr.color = _colorDisabled;
-        }
+        }     
     }
     
     void Update()
@@ -202,6 +214,12 @@ public class PlayerController : MonoBehaviour
 
         col.TryGetComponent(out PlayerController _otherPlayer);
         _otherPlayer.GetComponent<SpriteRenderer>().color = Color.white;
+
+        if (!_otherPlayer.ActiveForTheFirstTime)
+        {
+            _otherPlayer.ActiveForTheFirstTime = true;
+            GameController.Instance.InitializeListPlayer(_otherPlayer.gameObject);
+        }
     }
 
     private void DrawRayChecks()

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1432,87 +1432,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8443579761789629879}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1682199870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1682199872}
-  - component: {fileID: 1682199871}
-  m_Layer: 0
-  m_Name: Gamezin3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!212 &1682199871
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682199870}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1946712111
-  m_SortingLayer: -3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52d39143307051c4b973cfde80d2e2da, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39607844}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 11.232265, y: 26.319998}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1682199872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682199870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.7, y: 27.7, z: 0}
-  m_LocalScale: {x: 2.5692258, y: 2.5692258, z: 2.5692258}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1787795602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2220886844509602808, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
@@ -2127,19 +2046,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d4f055255f2d14cb49c496641ef944, type: 3}
---- !u!114 &1272684861674364632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6228784977242029976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515224a40082af94ea2bdae30c47b0b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nameWorldRelativePlayer: PlayerB
 --- !u!1001 &1578747765576541838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2684,7 +2590,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3129788618910187957}
-  - component: {fileID: 3129788618910187956}
   m_Layer: 0
   m_Name: MundoC
   m_TagString: Untagged
@@ -2692,19 +2597,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &3129788618910187956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3129788618910187954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515224a40082af94ea2bdae30c47b0b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nameWorldRelativePlayer: PlayerC
 --- !u!4 &3129788618910187957
 Transform:
   m_ObjectHideFlags: 0
@@ -3313,19 +3205,6 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b, type: 3}
---- !u!114 &5901636644083189069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6228784975652109029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515224a40082af94ea2bdae30c47b0b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nameWorldRelativePlayer: PlayerA
 --- !u!1001 &5996738365117980178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3571,7 +3450,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6228784975652109018}
-  - component: {fileID: 5901636644083189069}
   m_Layer: 0
   m_Name: MundoA
   m_TagString: Untagged
@@ -4379,9 +4257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _worlds:
-  - {fileID: 5901636644083189069}
-  - {fileID: 1272684861674364632}
-  - {fileID: 3129788618910187956}
+  - {fileID: 6228784975652109029}
+  - {fileID: 6228784977242029976}
+  - {fileID: 3129788618910187954}
   _player:
   - {fileID: 1862650089}
   - {fileID: 1854828596}
@@ -4518,7 +4396,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6228784977242029977}
-  - component: {fileID: 1272684861674364632}
   m_Layer: 0
   m_Name: MundoB
   m_TagString: Untagged
