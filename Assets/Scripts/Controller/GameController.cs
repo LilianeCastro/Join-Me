@@ -7,6 +7,7 @@ public enum PlatformType { Movement, Fall, Standing}
 
 public class GameController : Singleton<GameController>
 {
+    #region Variables & Properties
     [Header("Inverted world of a particular player")]
     [SerializeField] private World[] _worlds;
     [SerializeField] private GameObject[] _player;
@@ -31,7 +32,11 @@ public class GameController : Singleton<GameController>
             return _isInvertedWorldActive;
         }
     }
+    #endregion
 
+    private List<GameObject> _listPlayersCanControl = new List<GameObject>();
+
+    #region Unity Methods
     private void Start()
     {
         _invertedWorld.gameObject.SetActive(false);
@@ -45,17 +50,19 @@ public class GameController : Singleton<GameController>
         }
     }
 
-    public void ActiveWorld(GameObject namePlayerRelativeWorldToActive, bool status)
-    {
-        _dicWorldPlayer[namePlayerRelativeWorldToActive].gameObject.SetActive(status); //o nome do mundo a ser ativado é o mesmo nome do player que estiver ativo
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWorld();
         }
+    }
+    #endregion
+
+    #region Switch World Mechanics
+    public void ActiveWorld(GameObject playerRelativeWorldToActive, bool status)
+    {
+        _dicWorldPlayer[playerRelativeWorldToActive].gameObject.SetActive(status); //o nome do mundo a ser ativado é o mesmo nome do player que estiver ativo
     }
 
     public void ChangeWorld()
@@ -68,10 +75,10 @@ public class GameController : Singleton<GameController>
 
         SoundController.Instance.ChangeSoundWorld(_isCommonWorldActive);
     }
+    #endregion
 
     public void ChangeScene(string nameSceneToLoad)
     {
         SceneManager.LoadScene(nameSceneToLoad, LoadSceneMode.Single);
     }
-
 }
