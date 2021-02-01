@@ -1968,7 +1968,7 @@ PrefabInstance:
     - target: {fileID: 4797469704917915066, guid: 2e2ddcfb7a48830419dbf24056f13786,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.573944
+      value: -30.73
       objectReference: {fileID: 0}
     - target: {fileID: 4797469704917915066, guid: 2e2ddcfb7a48830419dbf24056f13786,
         type: 3}
@@ -2899,7 +2899,7 @@ PrefabInstance:
     - target: {fileID: 1188113708426251308, guid: 3a98d2be6afb44f418196e5fcaeae5f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.5
+      value: -27.23
       objectReference: {fileID: 0}
     - target: {fileID: 1188113708426251308, guid: 3a98d2be6afb44f418196e5fcaeae5f2,
         type: 3}
@@ -3983,7 +3983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6228784976382081340}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.382269, y: 4.2494717, z: -10}
+  m_LocalPosition: {x: -22.382273, y: 4.2494717, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6228784977265171363}
@@ -4096,7 +4096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6228784976476231653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.5, y: -5.22, z: 0}
+  m_LocalPosition: {x: -17.6, y: -0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9073635496409330678}
@@ -4143,7 +4143,7 @@ MonoBehaviour:
   _dialogue:
     _name: Vai ter nome?
     _sentence: I can do it!
-  _canDestroy: 0
+  _canDestroy: 1
   _delayTimeInScene: 2
 --- !u!1 &6228784976476231653
 GameObject:

@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         _playerSr = GetComponent<SpriteRenderer>();
         _playerAnim = GetComponent<Animator>();
         _playerCol = GetComponent<Collider2D>();
-        _playerAudioSource = GetComponent<AudioSource>();  
+        _playerAudioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
