@@ -114,12 +114,15 @@ public class GameController : Singleton<GameController>
     private void NextPlayer(int indexOld, int indexNew)
     {
         _listPlayersCanControl[indexOld].TryGetComponent(out PlayerController playerScript);
-             
+
+        playerScript.PlaySoundChange();
+        
         playerScript.CanControl = false;
         playerScript.FeedbackControl = false;
         ActiveWorld(playerScript.gameObject, false);
 
         _listPlayersCanControl[indexNew].TryGetComponent(out PlayerController nextPlayerScript);
+
         nextPlayerScript.CanControl = true;
         nextPlayerScript.FeedbackControl = true;
         ActiveWorld(nextPlayerScript.gameObject, false);

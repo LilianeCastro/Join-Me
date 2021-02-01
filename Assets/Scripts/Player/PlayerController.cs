@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private Animator _playerAnim;
     private Collider2D _playerCol;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource _playerAudioSource;
+    [SerializeField] private AudioSource _playerAudioSfx;
+    [SerializeField] private AudioClip[] _playerSfx;
+
     [SerializeField] private LayerMask layerMask; //pulo
     [SerializeField] private Camera _mainCamPlayer;
     [SerializeField] private Color _colorDisabled;
@@ -19,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _groundCheckR = default;
     [SerializeField] private float _distance = 1;
     private bool _isGrounded = true;
+    private float _horizontalInput = 0.0f;
 
     [Header("Player Check")]
     private RaycastHit2D _hitPlayerL;
@@ -81,7 +87,8 @@ public class PlayerController : MonoBehaviour
         _playerRb = GetComponent<Rigidbody2D>();
         _playerSr = GetComponent<SpriteRenderer>();
         _playerAnim = GetComponent<Animator>();
-        _playerCol = GetComponent<Collider2D>();        
+        _playerCol = GetComponent<Collider2D>();
+        _playerAudioSource = GetComponent<AudioSource>();  
     }
 
     private void Start()
@@ -103,6 +110,8 @@ public class PlayerController : MonoBehaviour
 
         Movement();
         Jump();
+        PlayWalkSfx();
+
         ChangeWorld();
         HitPlayer();
         ChangePlayer();
@@ -125,21 +134,39 @@ public class PlayerController : MonoBehaviour
     #region Basic
     private void Movement()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        _horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        transform.Translate(Vector3.right * _speedPlayer * horizontalInput * Time.deltaTime);
+        transform.Translate(Vector3.right * _speedPlayer * _horizontalInput * Time.deltaTime);
 
         _playerAnim.SetBool("isGrounded", _isGrounded);
-        _playerAnim.SetInteger("speedX", (int)horizontalInput);
+        _playerAnim.SetInteger("speedX", (int)_horizontalInput);
 
-        if(horizontalInput > 0 && _isLookLeft)
+        if(_horizontalInput > 0 && _isLookLeft)
         {
             Flip();
 
         }
-        else if(horizontalInput < 0 && !_isLookLeft)
+        else if(_horizontalInput < 0 && !_isLookLeft)
         {
             Flip();    
+        }
+    }
+
+    void PlayWalkSfx()
+    {   
+        if (_horizontalInput != 0 && _isGrounded)
+        {
+            if (!_playerAudioSource.isPlaying)
+            {
+                _playerAudioSource.Play();
+            }    
+        }
+        else
+        {
+            if (_playerAudioSource.isPlaying)
+            {
+                _playerAudioSource.Stop();
+            } 
         }
     }
 
@@ -154,6 +181,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
             _playerRb.AddForce(Vector2.up * _jumpForce);
+
+            _playerAudioSfx.PlayOneShot(_playerSfx[1]);
         }
     }
     #endregion
@@ -184,9 +213,13 @@ public class PlayerController : MonoBehaviour
             {
                 GameController.Instance.ChangeWorld();
             }
-
             GameController.Instance.NextPlayerControl();
         }
+    }
+
+    public void PlaySoundChange()
+    {
+        _playerAudioSfx.PlayOneShot(_playerSfx[0]);
     }
     #endregion
 
