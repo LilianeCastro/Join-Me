@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private Collider2D _playerCol;
 
     [SerializeField] private LayerMask layerMask; //pulo
-    [SerializeField] private GameObject _feedbackControl;
     [SerializeField] private Camera _mainCamPlayer;
     [SerializeField] private Color _colorDisabled;
 
@@ -33,8 +32,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField][Range(1.0f, 10.0f)] private float _speedPlayer = 5.0f;
     [SerializeField][Range(500.0f, 1600.0f)] private float _jumpForce = 500.0f;
 
-    private bool _canChangePlayer = false;
-    private bool _canChangeWorld = false;
     private bool _isLookLeft = false;
     #endregion
 
@@ -50,7 +47,7 @@ public class PlayerController : MonoBehaviour
         set
         {
             _canControl = value;
-            _mainCamPlayer.gameObject.SetActive(value);       
+            _mainCamPlayer.gameObject.SetActive(_canControl);   
         }
     }
 
@@ -64,6 +61,16 @@ public class PlayerController : MonoBehaviour
         set
         {
             _activeForTheFirstTime = value;
+        }
+    }
+
+    [SerializeField] private GameObject _feedbackControl;
+    public bool FeedbackControl
+    {
+        set
+        {
+            bool isActive = value;
+            _feedbackControl.SetActive(isActive);
         }
     }
     #endregion
@@ -134,7 +141,6 @@ public class PlayerController : MonoBehaviour
         {
             Flip();    
         }
-
     }
 
     private void Flip()
@@ -170,25 +176,16 @@ public class PlayerController : MonoBehaviour
 
     private void ChangePlayer()
     {
-        if (!_canChangePlayer) { return ; }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (!GameController.Instance.ListPlayerIsLarge()) { return; }
+
             if (GameController.Instance.IsInvertedWorldActive)
             {
                 GameController.Instance.ChangeWorld();
             }
 
-            _canChangePlayer = false;
-                            
-            GameController.Instance.ActiveWorld(this.gameObject, false);
-
-            CanControl = false;
-            _feedbackControl.SetActive(false);
-
-            _hitPlayerCollider.gameObject.TryGetComponent(out PlayerController otherPlayer);
-            otherPlayer.CanControl = true;
-            otherPlayer._feedbackControl.SetActive(true);
+            GameController.Instance.NextPlayerControl();
         }
     }
     #endregion
@@ -208,13 +205,12 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerDetected(Collider2D col)
     {
-        //Quando encostar no outro player ele nao vai poder mais andar, e o mundo vai para o mundo normal de ambos
-        _canChangePlayer = true;
         _hitPlayerCollider = col;
 
         col.TryGetComponent(out PlayerController _otherPlayer);
         _otherPlayer.GetComponent<SpriteRenderer>().color = Color.white;
-
+        
+        //Se o player nao estiver ativo na cena, ele vai falar que ele foi tocado e o colocara nas lista de players q pode trocar
         if (!_otherPlayer.ActiveForTheFirstTime)
         {
             _otherPlayer.ActiveForTheFirstTime = true;

@@ -35,6 +35,13 @@ public class GameController : Singleton<GameController>
     #endregion
 
     private List<GameObject> _listPlayersCanControl = new List<GameObject>();
+    private int _indexPlayerInControl;
+    private bool _canChangePlayer = true;
+
+    public bool ListPlayerIsLarge()
+    {
+        return _listPlayersCanControl.Count == 1 ? false : true;
+    }
 
     #region Unity Methods
     public override void Init()
@@ -75,6 +82,55 @@ public class GameController : Singleton<GameController>
     #endregion
 
     #region Switch World Mechanics
+    public void NextPlayerControl()
+    {        
+        if (!_canChangePlayer) { return ;}
+
+        _canChangePlayer = false;
+
+        StartCoroutine(DelayCanChange());
+
+        if(_indexPlayerInControl == 0 && _listPlayersCanControl.Count > 1)
+        {
+            print("1"); 
+            NextPlayer(_indexPlayerInControl, _indexPlayerInControl+1);
+            _indexPlayerInControl++;       
+        }
+
+        else if(_indexPlayerInControl > 0 &&  _indexPlayerInControl != _listPlayersCanControl.Count -1)
+        {  
+            print("2");
+            NextPlayer(_indexPlayerInControl, _indexPlayerInControl+1);
+            _indexPlayerInControl++;  
+        }
+        else if (_indexPlayerInControl == _listPlayersCanControl.Count -1)
+        {
+            print("3");
+            NextPlayer(_indexPlayerInControl, 0);
+            _indexPlayerInControl = 0;  
+        }
+    }
+
+    private void NextPlayer(int indexOld, int indexNew)
+    {
+        _listPlayersCanControl[indexOld].TryGetComponent(out PlayerController playerScript);
+             
+        playerScript.CanControl = false;
+        playerScript.FeedbackControl = false;
+        ActiveWorld(playerScript.gameObject, false);
+
+        _listPlayersCanControl[indexNew].TryGetComponent(out PlayerController nextPlayerScript);
+        nextPlayerScript.CanControl = true;
+        nextPlayerScript.FeedbackControl = true;
+        ActiveWorld(nextPlayerScript.gameObject, false);
+    }
+
+    IEnumerator DelayCanChange()
+    {
+        yield return new WaitForSeconds(0.2f);
+        _canChangePlayer = true;
+    }
+
     public void ActiveWorld(GameObject playerRelativeWorldToActive, bool status)
     {
         _dicWorldPlayer[playerRelativeWorldToActive].gameObject.SetActive(status); //o nome do mundo a ser ativado é o mesmo nome do player que estiver ativo

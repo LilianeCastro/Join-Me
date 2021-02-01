@@ -540,7 +540,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7971785267813959848}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -570,7 +570,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 768
-  _feedbackControl: {fileID: 4357556427330316078}
   _mainCamPlayer: {fileID: 0}
   _colorDisabled: {r: 0.31764707, g: 0.31764707, b: 0.32156864, a: 1}
   _groundCheckL: {fileID: 2784572230454928922}
@@ -583,6 +582,7 @@ MonoBehaviour:
   _jumpForce: 1200
   _canControl: 0
   _activeForTheFirstTime: 0
+  _feedbackControl: {fileID: 4357556427330316078}
 --- !u!212 &7971785267813959847
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -624,7 +624,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -8195794855884147311, guid: 1db26ceaf5a092649919a14985ef64d5,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.76815236, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
