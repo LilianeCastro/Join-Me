@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (!CanControl) { return ; }
+        if (!CanControl || Pause.Instance.IsPaused) { return ; }
 
         Movement();
         Jump();
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!CanControl) { return ; }
+        if (!CanControl || Pause.Instance.IsPaused) { return ; }
 
         _isGrounded = Physics2D.Raycast(_groundCheckL.position, Vector2.down, _distance, layerMask)
         || Physics2D.Raycast(_groundCheckR.position, Vector2.down, _distance, layerMask);

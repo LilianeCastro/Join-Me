@@ -150,9 +150,9 @@ TextureImporter:
       name: platform_gray_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 8
         y: 230
-        width: 243
+        width: 241
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -171,9 +171,9 @@ TextureImporter:
       name: platform_gray_1
       rect:
         serializedVersion: 2
-        x: 7
+        x: 8
         y: 212
-        width: 81
+        width: 80
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -215,7 +215,7 @@ TextureImporter:
         serializedVersion: 2
         x: 9
         y: 179
-        width: 80
+        width: 79
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -234,9 +234,9 @@ TextureImporter:
       name: platform_gray_4
       rect:
         serializedVersion: 2
-        x: 7
+        x: 8
         y: 96
-        width: 243
+        width: 241
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -255,9 +255,9 @@ TextureImporter:
       name: platform_gray_5
       rect:
         serializedVersion: 2
-        x: 7
+        x: 8
         y: 78
-        width: 81
+        width: 80
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -276,9 +276,9 @@ TextureImporter:
       name: platform_gray_6
       rect:
         serializedVersion: 2
-        x: 8
+        x: 9
         y: 61
-        width: 80
+        width: 79
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -297,9 +297,9 @@ TextureImporter:
       name: platform_gray_7
       rect:
         serializedVersion: 2
-        x: 8
+        x: 9
         y: 45
-        width: 81
+        width: 79
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -3,31 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Pause : MonoBehaviour
+public class Pause : Singleton<Pause>
 {
     [SerializeField] private GameObject _pausePanel;
     private bool _isPaused = false;
+    public bool IsPaused
+    {
+        get
+        {
+            return _isPaused;
+        }
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+            _isPaused = !_isPaused;
+            PauseGame();
         }
 
     }
     public void PauseGame()
     {
-        _isPaused = !_isPaused;
-        _pausePanel.SetActive(true);
-        Time.timeScale = 0f;
+        if (_isPaused)
+        {
+            _pausePanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            _pausePanel.SetActive(false);
+            Time.timeScale = 1.0f;
+        }    
     }
-
-    public void ContinueGame()
+    public void Resume()
     {
         _isPaused = !_isPaused;
-        _pausePanel.SetActive(false);
-        Time.timeScale = 1f;
-    }
-    
+        PauseGame();
+    }  
 }
