@@ -1742,10 +1742,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4862081033446234759, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_Name
       value: GroundCima
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215839739177718867, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b, type: 3}
@@ -2228,7 +2243,7 @@ PrefabInstance:
     - target: {fileID: 2220886844509602808, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.594
+      value: -20.4
       objectReference: {fileID: 0}
     - target: {fileID: 2220886844509602808, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
@@ -2280,6 +2295,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4862081033446234759, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_Name
@@ -2296,6 +2326,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8877745285879056769, guid: 3614b18bed027584aa258c0ef87b4e27,
         type: 3}
+    - target: {fileID: 8215839739177718867, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b, type: 3}
 --- !u!1001 &5996738365117980178
@@ -2308,7 +2343,7 @@ PrefabInstance:
     - target: {fileID: 2220886844509602808, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.594
+      value: -20.4
       objectReference: {fileID: 0}
     - target: {fileID: 2220886844509602808, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
@@ -2360,10 +2395,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4862081033446234759, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_Name
       value: GroundBaixo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215839739177718867, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b, type: 3}
@@ -3915,6 +3970,16 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315440982599605434, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4862081033446234759, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
         type: 3}
       propertyPath: m_Name
@@ -3931,6 +3996,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8877745285879056769, guid: 3614b18bed027584aa258c0ef87b4e27,
         type: 3}
+    - target: {fileID: 8215839739177718867, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4890a8b545ff8ef4ca8d2c3ebe4c876b, type: 3}
 --- !u!1001 &7562820538007060556
