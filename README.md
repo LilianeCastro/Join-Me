@@ -8,6 +8,10 @@
 
 ![Logo Join Me Png](/Assets/Sprites/HUD/logo.png)
 
+## Important
+
+You must have Git LFS configured for your user account before cloning the repository: git lfs install
+
 ## Description
 
 > A jump-based platform game of three playable characters, lost in a unknown universe. They have to find each other and combine their unique skills to get to the portal that will send them home! Each character has its own platforms only they can see, and they will need to work together to solve the puzzle!
