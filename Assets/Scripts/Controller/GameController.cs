@@ -92,20 +92,17 @@ public class GameController : Singleton<GameController>
 
         if(_indexPlayerInControl == 0 && _listPlayersCanControl.Count > 1)
         {
-            print("1"); 
             NextPlayer(_indexPlayerInControl, _indexPlayerInControl+1);
             _indexPlayerInControl++;       
         }
 
         else if(_indexPlayerInControl > 0 &&  _indexPlayerInControl != _listPlayersCanControl.Count -1)
         {  
-            print("2");
             NextPlayer(_indexPlayerInControl, _indexPlayerInControl+1);
             _indexPlayerInControl++;  
         }
         else if (_indexPlayerInControl == _listPlayersCanControl.Count -1)
         {
-            print("3");
             NextPlayer(_indexPlayerInControl, 0);
             _indexPlayerInControl = 0;  
         }

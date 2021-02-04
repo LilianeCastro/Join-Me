@@ -191,7 +191,9 @@ public class PlayerController : MonoBehaviour
     private void ChangeWorld()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-        {    
+        {  
+            transform.parent = null;
+             
             if (GameController.Instance.IsInvertedWorldActive)
             {
                 GameController.Instance.ActiveWorld(this.gameObject, false); 
@@ -208,6 +210,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!GameController.Instance.ListPlayerIsLarge()) { return; }
+
+            transform.parent = null;
 
             if (GameController.Instance.IsInvertedWorldActive)
             {
