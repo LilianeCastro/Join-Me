@@ -9,7 +9,7 @@ public class PlatformController : MonoBehaviour
     public Platform _Platform;
     public Transform[] _posPlat;
 
-    [SerializeField] private PlatformType _platformType;
+    [SerializeField] private PlatformType _platformType = default;
     [SerializeField] [Range(1.0f, 5.0f)] private float _speed = 2.0f;
     
     void Start()

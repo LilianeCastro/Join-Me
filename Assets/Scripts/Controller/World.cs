@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-    [SerializeField] private string _nameWorldRelativePlayer;
+    [SerializeField] private string _nameWorldRelativePlayer = default;
 
     public string NameWorldRelativePlayer
     {

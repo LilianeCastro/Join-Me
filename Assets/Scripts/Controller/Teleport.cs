@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] private Transform _portalToTeleport;
+    [SerializeField] private Transform _portalToTeleport = default;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

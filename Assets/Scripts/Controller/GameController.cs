@@ -9,12 +9,12 @@ public class GameController : Singleton<GameController>
 {
     #region Variables & Properties
     [Header("Inverted world of a particular player")]
-    [SerializeField] private GameObject[] _worlds;
-    [SerializeField] private GameObject[] _player;
+    [SerializeField] private GameObject[] _worlds = default;
+    [SerializeField] private GameObject[] _player = default;
     [SerializeField] private Dictionary<GameObject, GameObject> _dicWorldPlayer = new Dictionary<GameObject, GameObject>(); 
 
     [Header("Common world for all players")]
-    [SerializeField] private GameObject _commonWorld;
+    [SerializeField] private GameObject _commonWorld = default;
     private bool _isCommonWorldActive = true;
     public bool IsCommonWorldActive
     {
@@ -23,7 +23,7 @@ public class GameController : Singleton<GameController>
             return _isCommonWorldActive;
         }
     }
-    [SerializeField] private GameObject _invertedWorld;
+    [SerializeField] private GameObject _invertedWorld = default;
     private bool _isInvertedWorldActive = false;
     public bool IsInvertedWorldActive
     {

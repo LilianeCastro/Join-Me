@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColliderLoadNewScene : MonoBehaviour
 {
-    [SerializeField] private string _nameSceneToLoad;
+    [SerializeField] private string _nameSceneToLoad = default;
     
     private void OnTriggerEnter2D(Collider2D other)
     {

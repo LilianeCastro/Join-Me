@@ -11,18 +11,18 @@ public class PlayerController : MonoBehaviour
     private Collider2D _playerCol;
 
     [Header("Sound")]
-    [SerializeField] private AudioSource _playerAudioSource;
-    [SerializeField] private AudioSource _playerAudioSfx;
-    [SerializeField] private AudioClip[] _playerSfx;
+    [SerializeField] private AudioSource _playerAudioSource = default;
+    [SerializeField] private AudioSource _playerAudioSfx = default;
+    [SerializeField] private AudioClip[] _playerSfx = default;
 
-    [SerializeField] private LayerMask layerMask; //pulo
-    [SerializeField] private Camera _mainCamPlayer;
-    [SerializeField] private Color _colorDisabled;
+    [SerializeField] private LayerMask layerMask = default; //pulo
+    [SerializeField] private Camera _mainCamPlayer = default;
+    [SerializeField] private Color _colorDisabled = default;
 
     [Header("Ground Check")]
     [SerializeField] private Transform _groundCheckL = default;
     [SerializeField] private Transform _groundCheckR = default;
-    [SerializeField] private float _distance = 1;
+    [SerializeField] private float _distance = 1.0f;
     private bool _isGrounded = true;
     private float _horizontalInput = 0.0f;
 
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField] private GameObject _feedbackControl;
+    [SerializeField] private GameObject _feedbackControl = default;
     public bool FeedbackControl
     {
         set
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {  
             transform.parent = null;
-             
+
             if (GameController.Instance.IsInvertedWorldActive)
             {
                 GameController.Instance.ActiveWorld(this.gameObject, false); 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
-    [SerializeField] private Text _dialogText;
+    [SerializeField] private Text _dialogText = default;
 
     public void StartDialogue(Dialogue dialogue, float timeToShowInScene)
     {

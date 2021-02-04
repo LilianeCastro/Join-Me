@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SoundController : Singleton<SoundController>
 {
-    [SerializeField] private AudioSource _audioSourceCommonWorld;
-    [SerializeField] private AudioSource _audioSourceInverseWorld;
+    [SerializeField] private AudioSource _audioSourceCommonWorld = default;
+    [SerializeField] private AudioSource _audioSourceInverseWorld = default;
 
     public void ChangeSoundWorld(bool isCommonWorldActive)
     {

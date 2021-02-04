@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pause : Singleton<Pause>
 {
-    [SerializeField] private GameObject _pausePanel;
+    [SerializeField] private GameObject _pausePanel = default;
     private bool _isPaused = false;
     public bool IsPaused
     {

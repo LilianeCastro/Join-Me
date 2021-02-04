@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SoundUI : MonoBehaviour
 {
-    [SerializeField] private AudioSource _playerAudioSfx;
-    [SerializeField] private AudioClip[] _uiSfx;
+    [SerializeField] private AudioSource _playerAudioSfx = default;
+    [SerializeField] private AudioClip[] _uiSfx = default;
 
     void Start()
     {

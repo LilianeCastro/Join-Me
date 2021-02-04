@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] private Dialogue _dialogue;
+    [SerializeField] private Dialogue _dialogue = default;
     [SerializeField] private bool _canDestroy = false;
     [SerializeField] private Color _colorText = default;
     [SerializeField] [Range(0.5f, 5.0f)] private float _delayTimeInScene = 2.0f;
