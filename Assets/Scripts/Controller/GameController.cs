@@ -32,6 +32,19 @@ public class GameController : Singleton<GameController>
             return _isInvertedWorldActive;
         }
     }
+
+    private bool _gameOver = false;
+    public bool GameOver
+    {
+        get
+        {
+            return _gameOver;
+        }
+        set
+        {
+            _gameOver = value;
+        }
+    }
     #endregion
 
     private List<GameObject> _listPlayersCanControl = new List<GameObject>();
@@ -56,6 +69,8 @@ public class GameController : Singleton<GameController>
 
     private void Update()
     {
+        if (GameOver || Pause.Instance.IsPaused) { return; }
+        
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWorld();

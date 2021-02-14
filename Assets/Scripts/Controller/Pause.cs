@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Pause : Singleton<Pause>
 {
@@ -17,6 +16,8 @@ public class Pause : Singleton<Pause>
 
     void Update()
     {
+        if (GameController.Instance.GameOver) { return ; }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             _isPaused = !_isPaused;

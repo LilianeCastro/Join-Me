@@ -13,7 +13,6 @@ public class Menu : MonoBehaviour
 
     public void ReloadScene()
     {
-        print("Ent");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
